@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://o4tkm5tqgclo"]
+
+[ext_resource type="Script" uid="uid://bb3j03870jhi4" path="res://Princ.gd" id="1_57eqq"]
+
+[node name="Speedrun" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_57eqq")
+
+[node name="Temp_Chat" type="Timer" parent="."]
+wait_time = 1.6999999999999997
+autostart = true
+
+[node name="CajaCamaraYSegmentos" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 188.0
+grow_vertical = 2
+
+[node name="CajaTwichChat" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TwichChat" type="Label" parent="CajaTwichChat"]
+layout_mode = 2
+
+[connection signal="timeout" from="Temp_Chat" to="." method="EnviarChat"]
