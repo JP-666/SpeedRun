@@ -12,7 +12,6 @@ grow_vertical = 2
 script = ExtResource("1_57eqq")
 
 [node name="Temp_Chat" type="Timer" parent="."]
-wait_time = 1.6999999999999997
 autostart = true
 
 [node name="CajaCamaraYSegmentos" type="VBoxContainer" parent="."]
@@ -28,11 +27,22 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -192.0
+offset_left = -400.0
+offset_right = 18.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="TwichChat" type="Label" parent="CajaTwichChat"]
+[node name="SC" type="ScrollContainer" parent="CajaTwichChat"]
+custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
+follow_focus = true
+
+[node name="TwichChat" type="RichTextLabel" parent="CajaTwichChat/SC"]
+custom_minimum_size = Vector2(410, 300)
+layout_mode = 2
+bbcode_enabled = true
+scroll_following = true
+autowrap_mode = 2
+vertical_alignment = 2
 
 [connection signal="timeout" from="Temp_Chat" to="." method="EnviarChat"]
