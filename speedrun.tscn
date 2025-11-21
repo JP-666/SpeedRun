@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://o4tkm5tqgclo"]
+[gd_scene load_steps=3 format=3 uid="uid://o4tkm5tqgclo"]
 
 [ext_resource type="Script" uid="uid://bb3j03870jhi4" path="res://Princ.gd" id="1_57eqq"]
+[ext_resource type="VideoStream" uid="uid://ddh3ng0dkobm" path="res://Tick_Tock_corto.ogv" id="2_5eom0"]
 
 [node name="Speedrun" type="Control"]
 layout_mode = 3
@@ -40,9 +41,47 @@ follow_focus = true
 [node name="TwichChat" type="RichTextLabel" parent="CajaTwichChat/SC"]
 custom_minimum_size = Vector2(410, 300)
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
 bbcode_enabled = true
 scroll_following = true
 autowrap_mode = 2
 vertical_alignment = 2
+
+[node name="Caja_Super" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_top = 126.0
+offset_right = 234.0
+offset_bottom = 600.0
+grow_horizontal = 2
+
+[node name="Video" type="VideoStreamPlayer" parent="Caja_Super"]
+clip_contents = true
+custom_minimum_size = Vector2(128, 256)
+layout_mode = 2
+stream = ExtResource("2_5eom0")
+volume_db = -5.999998
+expand = true
+buffering_msec = 1000
+
+[node name="Mensaje_Donacion" type="Label" parent="Caja_Super"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 24
+text = "ABC"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AUDIO_DON" type="AudioStreamPlayer" parent="."]
+volume_db = 2.0
 
 [connection signal="timeout" from="Temp_Chat" to="." method="EnviarChat"]

@@ -11,6 +11,15 @@
 		"Mas malo y no naces",
 		"Chat os he contado la vez que mate a un ciclista?",
 		],
+	"MensajesPositivoGanar" : [
+		"SIIIIIIII",
+		"WOOOOOOO",
+		"CHAT CHAT CHAT",
+		"HE ESTADO AQUI!!",
+		"EN DIRECTO!!!",
+		"WORLD RECORD?!?!",
+		"Wooooooooooo"
+	],
 	"NombresUsuarioPARTE1": [
 		"TheGaming",
 		"Super",
@@ -33,4 +42,22 @@
 		"420",
 		"LoL",
 	],
+	"Donaciones" : {
+			"don1" : {
+				"texto" : "Esto es una donacion de prueba",
+				"audio" : "Audio1"
+			},
+			"don2" : {
+				"texto" : "XDDDDDDDDDDDDDDDDD",
+				"audio" : "Audio2"
+			}
+	},
+	"Donaciones_cantidades" : [
+		"200 bits",
+		"4 pavos del fornite",
+		"7 centimos",
+		"24302 Riales Iranies (Eso es menos de 50 centimos)",
+		"dos calcetines usados",
+		"componentes quimicos peligrosos",
+	]
 }
